@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>CERN openlab/Intel CMS Data Reduction Facility - CMS Big Data Project</title>
+    <title>Performance Metrics Documentation - CMS Big Data Project</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,16 +9,16 @@
 
 
 
-<link rel="canonical" href="/pages/datareduction.html.html">
+<link rel="canonical" href="/pages/metrics.html.html">
 
         <meta name="author" content="Oliver Gutsche" />
-        <meta name="description" content="CERN openlab/Intel CMS Data Reduction Facility" />
+        <meta name="description" content="Documentation of Performance Metrics for the CMS Big Data Project" />
 
     <meta property="og:site_name" content="CMS Big Data Project" />
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="CERN openlab/Intel CMS Data Reduction Facility"/>
-    <meta property="og:url" content="/pages/datareduction.html.html"/>
-    <meta property="og:description" content="CERN openlab/Intel CMS Data Reduction Facility" />
+    <meta property="og:title" content="Performance Metrics Documentation"/>
+    <meta property="og:url" content="/pages/metrics.html.html"/>
+    <meta property="og:description" content="Documentation of Performance Metrics for the CMS Big Data Project" />
 
 
     <!-- Bootstrap -->
@@ -72,12 +72,28 @@ CMS Big Data Project            </a>
     <div class="row">
         <div class="col-sm-9">
     <section id="content" class="body">
-        <h1 class="entry-title">CERN openlab/Intel CMS Data Reduction Facility</h1>
+        <h1 class="entry-title">Performance Metrics Documentation</h1>
         
         <div class="entry-content">
-            <h3>CERN openlab/Intel CMS Data Reduction Facility</h3>
+            <h1>Performance Metrics</h1>
+<h2>Application metrics</h2>
 <ul>
-<li><a href="/pages/metrics.html">Performance Metrics</a></li>
+<li>How quickly can I reduce how many events? Depends on</li>
+<li>reduction factor</li>
+<li>size per event</li>
+<li>how much of the event is accessed during reduction (to make decision (skimming) and also to pass on to output (slimming))</li>
+</ul>
+<h2>System metrics</h2>
+<ul>
+<li>memory usage and caching strategy<ul>
+<li>I/O metrics</li>
+<li>spark inbuilt metrics</li>
+<li>CPU time of all executors</li>
+<li>time spent on garbage in garbage collection, time in serialization</li>
+<li>from HDFS you get rows and data read from HDFS</li>
+</ul>
+</li>
+<li>measure network traffic, important for reading from EOS</li>
 </ul>
         </div>
     </section>
